@@ -1,0 +1,14 @@
+# Exported from Render on 2024-07-24T21:12:40Z
+services:
+- type: web
+  name: DAW
+  runtime: python
+  repo: https://github.com/bbrfrodriguez78/DAW
+  plan: free
+  envVars:
+  - key: PYTHON_VERSION
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: ./start.sh
+version: "1"
